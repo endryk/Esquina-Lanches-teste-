@@ -1,0 +1,29 @@
+<%- contentFor('title') %>
+    Restaurantes
+<%- contentFor('main') %>
+<h3>Restaurantes</h3>
+<% restaurantes.forEach(function(restaurante){ %>
+    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+        <div class="card-header">
+            <h3><%= restaurante.nome %></h3>
+            <small><%= restaurante.username %></small>
+          </div>
+        <div class="card-body m-1">
+            <ul>
+                <li><strong>Tipo:</strong> <%= restaurante.tipo %> </li>
+                
+            </ul>
+            <button class="btn btn-outline-info"><a class="link-unstyled" href='/restaurantes/<%=restaurante.id_restaurante%>'>Ver opções</a></button>
+        </div>
+    </div>
+<% }) %> 
+
+<style>
+    body{
+        background-color: black;
+    }
+
+    h3{
+        color: white;
+    }
+</style>

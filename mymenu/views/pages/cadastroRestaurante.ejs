@@ -1,0 +1,42 @@
+<%- contentFor('title') %>
+    Cadastrar Restaurante
+<%- contentFor('main') %>
+<h3 class="m-3">Cadastre o seu Restaurante</h3>
+<form action="/salvarrestaurante" method='post'>
+    <div class="form-group m-3">
+        
+        <input type="email" class="form-control" placeholder="Seu Email" name="email">
+    </div>
+    <div class="form-group m-3">
+        
+        <input type="text" class="form-control" placeholder="Username" name="username">
+    </div>
+    <div class="form-group m-3">
+        
+        <input type="text" class="form-control" placeholder="Nome do Restaurante" name="nome">
+    </div>
+    <div class="form-group m-3">
+        <select name="tipo" class="form-control">
+            <option value="Brasileira">Comida Caseira</option>
+            <option value="Pizza">Doces</option>
+            <option value="Lanches">Bolos</option>
+            <option value="Japonesa">Churrasco</option>
+            <option value="Outras">Hamburguer</option>
+          </select>
+    </div>
+    <div class="form-group m-3">
+    
+        <input type="password" class="form-control" placeholder="Senha" name="senha">
+    </div>
+    <button type="submit" class="btn btn-primary m-3">Cadastrar</button>
+</form>
+
+<style>
+    body{
+        background-color: black;
+    }
+
+    h3{
+        color: white;
+    }
+</style>

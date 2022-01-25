@@ -1,0 +1,19 @@
+<%- contentFor('title') %>
+    Cardapio
+<%- contentFor('main') %>
+<h3>Cardápio</h3>
+<% items.forEach(function(item){ %>
+    <div class="card text-white bg-dark mb-5" style="width: 20rem;">
+        <div class="card-header">
+            <h3><%= item.nome %></h3>
+          </div>
+        <div class="card-body m-1">
+            <ul>
+                <li><strong>Descrição:</strong> <%= item.descricao %> </li>
+                <li><strong>Valor:</strong>R$ <%= item.valor %> </li>
+            </ul>
+                <button class="btn btn-outline-danger"><a class="link-unstyled" href='/deletaritem/<%=item.id_item%>'>Deletar</a></button>
+                <button class="btn btn-outline-primary"><a class="link-unstyled" href='/atualizaritem/<%=item.id_item%>'>Atualizar</a></button>
+        </div>
+    </div>
+<% }) %>  
